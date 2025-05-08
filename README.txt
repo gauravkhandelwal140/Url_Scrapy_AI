@@ -1,6 +1,5 @@
 # Url_Scrapy_AI
-# Url_Scrapy_AI
-Url_Scrapy_AI
+
 Url_Scrapy_AI is a Python-based web scraping tool designed to extract and process content from URLs. and give realtime questions answer.
 Installation
 Clone the Repository:
