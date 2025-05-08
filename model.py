@@ -1,6 +1,8 @@
 from __future__ import annotations
 from pydantic import BaseModel, HttpUrl
-from typing import Optional
+from typing import Optional, Union
+
+
 class WebsiteRequest(BaseModel):
     url: HttpUrl
 
@@ -13,3 +15,10 @@ class WebsiteInfo(BaseModel):
 
 
 
+class QARequest(BaseModel):
+    url: HttpUrl
+    question: str
+
+class QAResponse(BaseModel):
+    question: Optional[str] = None
+    answer:  Optional[Union[str, dict]] = None

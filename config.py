@@ -1,2 +1,3 @@
-SECRET_API_KEY = "get_my_key"
-GOOGLE_API_KEY = 'AIzaSyA47CfojnEHtrRztYseEaVr5IeKrjyuVI8'
+import os
+SECRET_API_KEY = os.getenv("SECRET_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
