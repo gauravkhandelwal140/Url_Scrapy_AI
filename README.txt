@@ -1,5 +1,5 @@
 # Url_Scrapy_AI
-Url_Scrapy_AI
+
 Url_Scrapy_AI is a Python-based web scraping tool designed to extract and process content from URLs. and give realtime questions answer.
 Installation
 Clone the Repository:
@@ -86,10 +86,4 @@ Note: for local use change this  'url-scrapy-ai.onrender.com' to localhost or lo
 
 I have made a simple UI app
 link: https://url-scrapy-ai.onrender.com/
-
-
-
-
-
-
 
