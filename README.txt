@@ -31,5 +31,65 @@ Url_Scrapy_AI/
 ├── requirements.txt# Project dependencies
 └── README.md       # Project documentation
 
-api 
+Technology Used:
+python
+FastApi
+Pydantic
+Langchain
+gimmi--LLM model
+BeautifulSoup
+requests
+html
+Bootstrap
+Api doc:
+
+https://url-scrapy-ai.onrender.com/scrape_data
+
+
+live api- :
+ 1. 
+    url:https://url-scrapy-ai.onrender.com/scrape_data  Note: this api give perdifined question  answer like  company_name,industry
+    method:post
+    header:{
+      'Authorization': 'Bearer get_my_key'
+    }
+    data:{
+        "url":"https://www.example.com/"
+      }
+    response:{
+      "company_name": "xyz",
+      "industry": "Men's Grooming",
+      "company_size": null,
+      "location": "India"
+  }
+
+2.
+  url:https://url-scrapy-ai.onrender.com/scrape_data_with_question  Note: this api give runtime question  answer like  company_name,industry
+    method:post
+    header:{
+      'Authorization': 'Bearer get_my_key'
+    }
+    data:{
+       "url":"https://firmable.com/",
+       "question": "Tell me compney name and company_size and compney locations "
+    }
+    response:{
+    "question": "Tell me compney name and company_size and compney locations",
+    "answer": {
+        "company_name": "Firmable Solutions",
+        "company_size": "Small or big business? We’ve got you covered. Our easy-to-use platform lets you get started in minutes, with flexible pricing to suit businesses of all sizes.",
+        "company_locations": "Australia and New Zealand"
+    }
+}
+
+Note: for local use change this  'url-scrapy-ai.onrender.com' to localhost or local ip-address
+
+I have made a simple UI app
+link: https://url-scrapy-ai.onrender.com/
+
+
+
+
+
+
 
