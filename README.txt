@@ -86,3 +86,4 @@ Note: for local use change this  'url-scrapy-ai.onrender.com' to localhost or lo
 
 I have made a simple UI app
 link: https://url-scrapy-ai.onrender.com/
+
