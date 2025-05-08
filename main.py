@@ -21,7 +21,7 @@ def analyze_website(data:WebsiteRequest,authorization: str = Header(None)):
     if authorization != f"Bearer {SECRET_API_KEY}":
         raise HTTPException(status_code=401, detail="Unauthorized")
 
-    raw_text = scrape_homepage(text=data.url)
+    raw_text = scrape_homepage(url=data.url)
     if not raw_text:
         raise HTTPException(status_code=400, detail="Unable to extract website content")
     analysis = extract_info(raw_text)
