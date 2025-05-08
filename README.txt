@@ -36,8 +36,8 @@ python
 FastApi
 Pydantic
 Langchain
-gimmi--LLM model
-BeautifulSoup
+Google Gemini AI Model
+BeautifulSoup 
 requests
 html
 Bootstrap
