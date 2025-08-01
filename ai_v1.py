@@ -3,8 +3,6 @@ import re
 
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
-
-from ai import systemPrompt
 from config.config import GOOGLE_API_KEY
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
