@@ -1,5 +1,5 @@
 from __future__ import annotations
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, HttpUrl, Field
 from typing import Optional, Union
 
 
@@ -20,5 +20,5 @@ class QARequest(BaseModel):
     question: str
 
 class QAResponse(BaseModel):
-    question: Optional[str] = None
-    answer:  Optional[Union[str, dict]] = None
+    question: Optional[str] = Field(description="Give the same question as asked")
+    answer:  Optional[Union[str, dict]] = Field(description="Answer extracted from the given context")
