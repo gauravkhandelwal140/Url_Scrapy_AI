@@ -9,7 +9,7 @@ import hashlib
 
 from langchain.vectorstores import FAISS
 
-embedding = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=GOOGLE_API_KEY)
+embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=GOOGLE_API_KEY)
 
 def scrape_url(url: str) -> str:
     try:
