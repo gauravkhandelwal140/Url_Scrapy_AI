@@ -9,7 +9,7 @@ import hashlib
 from pinecone import Pinecone, ServerlessSpec
 from langchain_pinecone import PineconeVectorStore
 
-embedding = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=GOOGLE_API_KEY)
+embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=GOOGLE_API_KEY)
 
 os.environ["PINECONE_API_KEY"] = pinecode_db
 pc = Pinecone(api_key=pinecode_db)
@@ -26,7 +26,7 @@ def scrape_url(url: str) -> str:
 
 
 def clean_and_chunk(text: str):
-    splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=50)
+    splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     return splitter.create_documents([text])
 
 
@@ -89,7 +89,7 @@ def get_context_from_vectordb(namespace: str, question: str):
         namespace=namespace,
         pinecone_api_key=pinecode_db
     )
-    docs = vectorstore.similarity_search(question, k=15,namespace=namespace)
+    docs = vectorstore.similarity_search(question, k=25,namespace=namespace)
     print(docs)
     combined_text = "\n".join([doc.page_content for doc in docs])
     print(combined_text)
