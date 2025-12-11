@@ -70,12 +70,9 @@ def extract_info_with_question(text: str,question:str):
 def get_ai_answer(context,question):
     llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_key=GOOGLE_API_KEY).with_structured_output(QAResponse)
     system_prompt = SystemMessagePromptTemplate.from_template(
-        """You are a helpful and concise assistant designed to extract and answer questions strictly based on the provided context.
-            Respond only with information found in the context.
-            Do not provide any additional explanation or assumptions.
-            
-            If the answer is not present in the context, respond politely with something like:
-            "I'm sorry, I couldn't find the answer to your question based on the provided information."
+        """
+            You are an assistant helping extract business information from a website homepage.
+            You are a helpful chatbot assistant extract business information from a  provided context designed to extract and answer questions based on the provided context.
         """
     )
     human_prompt = HumanMessagePromptTemplate.from_template(
