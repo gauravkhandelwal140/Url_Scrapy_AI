@@ -12,7 +12,7 @@ from langchain_text_splitters import CharacterTextSplitter
 
 from model import QAResponse
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_key=GOOGLE_API_KEY)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=GOOGLE_API_KEY)
 
 #deprecrated code
 def extract_info(text: str) -> dict:
@@ -68,7 +68,7 @@ def extract_info_with_question(text: str,question:str):
     return parsed_data
 
 def get_ai_answer(context,question):
-    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_key=GOOGLE_API_KEY).with_structured_output(QAResponse)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=GOOGLE_API_KEY).with_structured_output(QAResponse)
     system_prompt = SystemMessagePromptTemplate.from_template(
         """
             You are an assistant helping extract business information from a website homepage.
